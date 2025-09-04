@@ -104,3 +104,27 @@ body {
     color: black;
     text-shadow: 1px 1px 2px black;
 }
+
+.Web_Page-image {
+    background-image: url('/images/Web_Page_.jpg');
+    background-size: cover;         /* fills the screen */
+    background-position: center;    /* centers image */
+    background-repeat: no-repeat;   /* avoid tiling */
+    height: 100vh;                  /* full page height */
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+}
+.Web_Page-image h2{
+
+  font-size: 17px;
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.0);
+  border-radius: 6px;
+  opacity: 0.9;
+  transform: rotate(10deg);
+}
