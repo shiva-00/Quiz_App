@@ -1,4 +1,10 @@
 @model MyApp.Model.User
 <div class="Web_Page-image">
-    <h2>Welcome To Your New WEBPAGE Mr. @Model.Name</h2>
+    <form asp-action="WebPage" method="post">
+        <input type="hidden" name="Id" value="@Model.id">
+        <h2>Welcome To Your PAGE Mr. @Model.Name</h2><br>
+        <h2 style="margin-right:5% ;">Goto Your Account</h2>
+        <h2><button type="submit">Profile</button></h2>
+    </form>
 </div>
+

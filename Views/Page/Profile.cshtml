@@ -1,0 +1,22 @@
+@model MyApp.Model.User
+
+<div class="Profile-image">
+        <form asp-action="Profile" method="post">
+            <input type="hidden" name="id" value="@Model.id">
+            <h2>Hello, Mr. @Model.Name. Please choose your option</h2>
+
+           <button type="submit" name = "subject" value= "Mathematics">Mathematics</button><br><br>
+           
+           <button type="submit" name = "subject" value="English">English</button><br><br>
+
+           <button type="submit" name = "subject" value ="General_Knowledge">General Knowledge</button><br><br>
+
+           <button type="submit" name = "subject" value ="Aptitude">Aptitude</button><br><br>
+
+           <button type="submit" name = "subject" value ="Logical">Logical</button><br><br>
+
+
+
+
+        </form>
+</div>

@@ -117,7 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     color: black;
-    text-shadow: 1px 1px 2px white;
+    text-shadow: 1px 1px 2px black;
 }
 .Web_Page-image h2{
 
@@ -125,6 +125,88 @@ body {
   padding: 10px 20px;
   background-color: rgba(255,255,255,0.0);
   border-radius: 6px;
-  opacity: 0.9;
   transform: rotate(10deg);
+  margin-left: 27%;
+}
+
+.Profile-image {
+    background-image: url('/images/Profile.jpg');
+    background-size: cover;         /* fills the screen */
+    background-position: center;    /* centers image */
+    background-repeat: no-repeat;   /* avoid tiling */
+    height: 100vh;                  /* full page height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.Mathematics-image {
+    background-image: url('/images/Mathematics_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 70px;
+    padding-top: 80px;
+    margin-left: 0;
+    color :black;
+    text-shadow: 1px 1px 2px black;
+}
+.English-image {
+    background-image: url('/images/English_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color :antiquewhite;
+    text-shadow: 1px 1px 2px black;
+}
+.General_Knowledge-image{
+    background-image: url('/images/GK.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color :antiquewhite;
+    text-shadow: 1px 1px 2px black;
+}
+.Aptitude-image{
+    background-image: url('/images/Aptitude.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: flex;
+    align-items:flex-start;
+    text-align: left;
+    padding-left: 70px;
+    padding-top: 50px;
+    color :antiquewhite;
+    text-shadow: 1px 1px 2px black;
+}
+.Logical-image{
+    background-image: url('/images/Logical.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color :darksalmon;
+    text-shadow: 1px 1px 2px black;
 }

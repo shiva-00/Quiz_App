@@ -1,0 +1,19 @@
+@model MyApp.Model.User
+
+<div class = "Mathematics-image">
+    <div>
+        <h2 class = "ms-10">Mathematics</h2>
+        <form asp-action="Mathematics" method="post">
+        <input type="hidden" name= "id" value = "@Model.id">
+        <h2>Hey Mr. @Model.Name, Please Choose the difficulty Level</h2>
+
+        <button type = "submit" name = "Sub" value = "Easy">Easy</button><br><br>
+
+        <button type = "submit" name = "Sub" value = "Medium">Medium</button><br><br>
+
+        <button type = "submit" name = "Sub" value = "Difficult">Difficult</button><br><br>
+
+        <button type = "submit" name = "Sub" value = "Advanced">Advanced</button><br><br>
+        </form>
+    </div>
+</div>
