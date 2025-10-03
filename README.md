@@ -69,7 +69,7 @@ A TO-DO List with CRUD Operations will be added later.
 3. ## Configure Email Settings
                   In appsettings.json, update the EmailSettings section with your SMTP details:
                     "EmailSettings": { 
-                      "SmtpServer": "smtp.your-email.com",
+                      "SmtpServer": "smtp.gmail.com",
                       "Port": 587,
                       "SenderName": "Your App Name",
                       "SenderEmail": "your-email@example.com",
