@@ -1,15 +1,17 @@
-# USER AUTHENTICATION SYSTEM (ASP.NET Core MVC) 
+# QUIZ Module with USER AUTHENTICATION SYSTEM (ASP.NET Core MVC) 
 
 ## Overview 
+The Quiz Module is a web-based feature built using ASP.NET Core MVC that allows users to register, Login, and attempt quizzes across multiple subjects and difficulty levels. It dynamically displays questions, captures user response, and calculate scores upon submission.
 
-This Project is a User Authentication System built using ASP.NET Core MVC and Entity Framework Core.
-It includes essential authentication features such as Registration, Login , Forgot Password and Otp Verification.
-A TO-DO List with CRUD Operations will be added later.
+
 
 ## FEATURES 
 - User Registration with Validation
 - Secure Login
 - Forgot Password with Otp Verification via Email
+- Multiple subjects (Mathematics, ENglish, Logical, etc.,)
+- score calculation and result summary after submission
+- MVC architectire with proper model binding and validation
 - Entity Framework Core with SQL Server for database management
 
 ## Tech Stack
@@ -34,8 +36,11 @@ A TO-DO List with CRUD Operations will be added later.
    ┣ 📜 OtpController.cs
    ┣ 📜 PageController.cs
    ┗ 📜 PasswordControllers.cs
+   ┗ 📜 MathController.cs
+   ┗ 📜 QuizController.cs
 📂 Models
    ┗ 📜 User.cs
+   ┗ 📜 Quiz.cs
 📂 Views
   ┣ 📂 Account
   ┃   ┣ 📜 Login.cshtml
@@ -47,6 +52,18 @@ A TO-DO List with CRUD Operations will be added later.
   ┃   ┣ 📜 Forgot_Password.cshtml
   ┃   ┣ 📜 Verify_Otp.cshtml
   ┃   ┗ 📜 Password_Reset.cshtml
+  ┣ 📂 Math
+      ┣ 📂 Mathematics_Easy.cshtml
+      ┣ 📂 Mathematics_Medium.cshtml
+  ┣ 📂 Quiz
+      ┣ 📂 Aptitude.cshtml
+      ┣ 📂 Logical.cshtml
+      ┣ 📂 English.cshtml
+      ┣ 📂 General_Knowledge.cshtml
+      ┣ 📂 Mathematics.cshtml
+  ┣ 📂 shared
+      ┣ 📂 Result.cshtml
+
 📂 Data
   ┗ 📜 MyDatabase.cs
 📂 Services
@@ -90,6 +107,8 @@ A TO-DO List with CRUD Operations will be added later.
 - Role-based Authentication (Admin/User)
 - Profile Management
 - Activity Logs for User Operations
+- Implementing all subjects for quizzing
+
 
 
 
