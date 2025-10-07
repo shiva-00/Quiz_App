@@ -1,0 +1,23 @@
+@model MyApp.Quizzmodel.Quizmodel
+
+<p>Welcome to Your @Model.Subject Easy level Quizz</p>
+
+<form asp-action="English" method="post">
+    <input type="hidden" asp-for="@Model.User_Id" />
+    @for(int i=0;i<Model.Questions.Count;i++)
+    {
+        <p>@Model.Questions[i].Question</p>
+        @for (int j=0;j<Model.Questions[i].Options.Count;j++)
+        {
+            <input type="radio"  name="Questions[@i].UserOption" value="@Model.Questions[i].Options[j]"/>
+            @Model.Questions[i].Options[j]
+        }
+        <input type="hidden" name="Questions[@i].Question" value="@Model.Questions[i].Question"/>
+        <input type="hidden" name="Questions[@i].CorrectAnswer" value="@Model.Questions[i].CorrectAnswer"/>
+        <input type="hidden" name="Questions[@i].UserOption" value="@Model.Questions[i].UserOption"/>
+        <input type="hidden" name="Questions[@i].id"  value="@Model.Questions[i].id"/>
+    }
+    <br><br>
+    <button type="submit">Submit Quiz</button>
+
+</form>

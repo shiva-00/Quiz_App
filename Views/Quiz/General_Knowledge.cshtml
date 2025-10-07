@@ -5,15 +5,8 @@
         <h2 class = "ms-10">General Knowledge</h2>
         <form asp-action="General_Knowledge" method="post">
         <input type="hidden" name= "id" value = "@Model.id">
-        <h2>Hey Mr. @Model.Name, Please Choose the difficulty Level</h2>
-
-        <button type = "submit" name="Sub" value="General_Knowledge_Easy">Easy</button><br><br>
-
-        <button type = "submit" name="Sub" value="General_Knowledge_Medium">Medium</button><br><br>
-
-        <button type = "submit" name="Sub" value="General_Knowledge_Difficult">Difficult</button><br><br>
-
-        <button type = "submit" name="Sub" value="General_Knowledge_Advanced">Advanced</button><br><br>
+        <h2>Hey Mr. @Model.Name, Are you ready to test your knowledge</h2>
+        <button type = "submit" name="Sub" value="GK">Go to Quiz</button><br><br>
         </form>
     </div>
 </div>

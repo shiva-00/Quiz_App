@@ -29,18 +29,11 @@ namespace MyApp.QzController
             var user = Data.Users.FirstOrDefault(U => U.id == model.id);
             if (user != null)
             {
-                if (Sub == "Easy")
-                    return RedirectToAction("Mathematics_Easy","Math", new { id = model.id });
-                else if (Sub == "Medium")
-                    return RedirectToAction("Mathematics_Medium","Math", new { id = model.id });
-                else if (Sub == "Difficult")
-                    return RedirectToAction("Mathematics_DIfficult", "Math", new { id = model.id });
-                else if (Sub == "Advanced")
-                    return RedirectToAction("Mathematics_Advanced","Math", new { id = model.id });
+                if (Sub == "Math")
+                    return RedirectToAction("Mathematics","Math", new { id = model.id });
             }
             return NotFound();
         }
-
 
 
         [HttpGet]
@@ -61,14 +54,8 @@ namespace MyApp.QzController
             var user = Data.Users.FirstOrDefault(U => U.id == model.id);
             if (user != null)
             {
-                if (Sub == "Easy")
-                    return RedirectToAction("English_Easy", new { id = model.id });
-                else if (Sub == "Medium")
-                    return RedirectToAction("English_Medium", new { id = model.id });
-                else if (Sub == "Difficult")
-                    return RedirectToAction("English_DIfficult", new { id = model.id });
-                else if (Sub == "Advanced")
-                    return RedirectToAction("English_Advanced", new { id = model.id });
+                if (Sub == "Eng")
+                    return RedirectToAction("English","English", new { id = model.id });
             }
             return NotFound();
         }
@@ -89,47 +76,11 @@ namespace MyApp.QzController
             var user = Data.Users.FirstOrDefault(U => U.id == model.id);
             if (user != null)
             {
-                if (Sub == "Easy")
-                    return RedirectToAction("General_Knowledge_Easy", new { id = model.id });
-                else if (Sub == "Medium")
-                    return RedirectToAction("General_Knowledge_Medium", new { id = model.id });
-                else if (Sub == "Difficult")
-                    return RedirectToAction("General_Knowledge_DIfficult", new { id = model.id });
-                else if (Sub == "Advanced")
-                    return RedirectToAction("General_Knowledge_Advanced", new { id = model.id });
+                if (Sub == "GK")
+                    return RedirectToAction("Gen_Knowledge","GK", new { id = model.id });
             }
             return NotFound();
         }
-        [HttpGet]
-        public IActionResult Aptitude(int id)
-        {
-            var user = Data.Users.FirstOrDefault(U => U.id == id);
-            if (user != null)
-            {
-                return View(user);
-            }
-            return NotFound();
-
-        }
-
-        [HttpPost]
-        public IActionResult Aptitude(User model, string Sub)
-        {
-            var user = Data.Users.FirstOrDefault(U => U.id == model.id);
-            if (user != null)
-            {
-                if (Sub == "Easy")
-                    return RedirectToAction("Aptitude_Easy", new { id = model.id });
-                else if (Sub == "Medium")
-                    return RedirectToAction("Aptitude_Medium", new { id = model.id });
-                else if (Sub == "Difficult")
-                    return RedirectToAction("Aptitude_DIfficult", new { id = model.id });
-                else if (Sub == "Advanced")
-                    return RedirectToAction("Aptitude_Advanced", new { id = model.id });
-            }
-            return NotFound();
-        }
-
 
         [HttpGet]
         public IActionResult Logical(int id)
@@ -149,14 +100,8 @@ namespace MyApp.QzController
             var user = Data.Users.FirstOrDefault(U => U.id == model.id);
             if (user != null)
             {
-                if (Sub == "Easy")
-                    return RedirectToAction("Logical_Easy", new { id = model.id });
-                else if (Sub == "Medium")
-                    return RedirectToAction("Logical_Medium", new { id = model.id });
-                else if (Sub == "Difficult")
-                    return RedirectToAction("Logical_DIfficult", new { id = model.id });
-                else if (Sub == "Advanced")
-                    return RedirectToAction("Logical_Advanced", new { id = model.id });
+                if (Sub == "Logic")
+                    return RedirectToAction("Logical","Logic", new { id = model.id });
             }
             return NotFound();
         }

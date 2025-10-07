@@ -5,6 +5,6 @@
 
     @for (int i=0;i<Model.Questions.Count;i++)
     {
-        <p>Your Answer for " @Model.Questions[i].Question " is @Model.Questions[i].UserOption</p>
+        <p>Your Answer for " @Model.Questions[i].Question " is : @Model.Questions[i].UserOption</p>
         <p> The Correct answer is " @Model.Questions[i].CorrectAnswer "</p><br><br>
     }

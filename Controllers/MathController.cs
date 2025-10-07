@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Model;
 using MyApp.Data;
 using MyApp.Quizzmodel;
 
@@ -15,7 +14,7 @@ namespace MyApp.MathematicsController
         }
 
         [HttpGet]
-        public IActionResult Mathematics_Easy(int id)
+        public IActionResult Mathematics(int id)
         {
             var user = Data.Users.FirstOrDefault(U => U.id == id);
             if (user != null)
@@ -58,56 +57,125 @@ namespace MyApp.MathematicsController
                         new Questionmodel
                         {
                             id =5,
-                            Question =" What is the Resul of the following Fraction \"5/8 + 6/9 :  \" ",
+                            Question =" What is the Result of the following Fraction \"5/8 + 6/9 :  \" ",
                             Options = new List<string>{"33/24","35/27","30/72","31/24"},
                             CorrectAnswer = "31/24"
                         },
                          new Questionmodel
                         {
                             id =6,
-                            Question =" A man can Travell 5 km in 1 hour. How far will he travel in 2.5 hours ",
-                            Options = new List<string>{"11.5","12.5","13.5","15"},
-                            CorrectAnswer = "12.5"
+                            Question =" what is result of 5!.",
+                            Options = new List<string>{"110","115","120","125"},
+                            CorrectAnswer = "120"
                         },
                          new Questionmodel
                         {
                             id =7,
-                            Question ="There are 10 books left in the book shop and shopkeeper decides to sell them. the total cost of books are Rs/-600.  Among Them Two of the books are damaged, so, the shopkeeper decided to sell those 2 books for the half its original price. What is the total amount the buyer has to pay for all the ten books",
-                            Options = new List<string>{"540","480","520","550"},
-                            CorrectAnswer = "540"
+                            Question ="Which of the following is divisible by 3",
+                            Options = new List<string>{"4","11","13","15"},
+                            CorrectAnswer = "15"
                         },
                          new Questionmodel
                         {
                             id =8,
-                            Question ="What is 12% of 1250",
-                            Options = new List<string>{"125","105","150","145.7"},
-                            CorrectAnswer = "150"
+                            Question ="Which of the following is a proper fraction: ",
+                            Options = new List<string>{"12/5","3/4","5/4","12/4"},
+                            CorrectAnswer = "3/4"
                         },
                          new Questionmodel
                         {
                             id =9,
-                            Question ="A shirt costs RS/-750. The shopkeeper offered them a discount of 15%. What is the cost of the shirt.",
-                            Options = new List<string>{"637.50","637","635","650"},
-                            CorrectAnswer = "637.50"
+                            Question ="What is the result of mixed fraction 3(2/5) after converting it into improper fraction",
+                            Options = new List<string>{"13/5","2/5","3/5","17/5"},
+                            CorrectAnswer = "17/5"
                         },
                          new Questionmodel
                         {
                             id =10,
                             Question ="What is the average of following : 10,20,15,30,25",
-                            Options = new List<string>{"10", "15","20","25"},
+                            Options = new List<string>{"10","15","20","25"},
                             CorrectAnswer = "20"
-                        }
-                        
+                        },
+                        new Questionmodel
+                        {
+                            id =11,
+                            Question = "The ratio of boys to girls in a class is 3:2. If there are 15 boys, how many girls are there?",
+                            Options = new List<string>{"8","10","6","12"},
+                            CorrectAnswer = "10"
+                        },
+                        new Questionmodel
+                        {
+                            id =12,
+                            Question =" A student scored 240 marks out of 300. Find the percentage.",
+                            Options = new List<string>{"60%","70%","80%","20%"},
+                            CorrectAnswer ="80%"
+                        },
+                        new Questionmodel
+                        {
+                            id =13,
+                            Question =" If x = 12, find the value of (5x + 8).",
+                            Options = new List<string>{"100","120","90","110"},
+                            CorrectAnswer ="100"
+                        },
+                        new Questionmodel
+                        {
+                            id =14,
+                            Question =" A man can Travell 5 km in 1 hour. How far will he travel in 2.5 hours",
+                            Options = new List<string>{"11.5","12.5","13.5","15"},
+                            CorrectAnswer ="12.5"
+                        },
+                        new Questionmodel
+                        {
+                            id =15,
+                            Question ="There are 10 books left in the book shop and shopkeeper decides to sell them. the total cost of books are Rs/-600.  Among Them Two of the books are damaged, so, the shopkeeper decided to sell those 2 books for the half its original price. What is the total amount the buyer has to pay for all the ten books",
+                            Options = new List<string>{"540","480","520","550"},
+                            CorrectAnswer ="540"
+                        },
+                        new Questionmodel
+                        {
+                            id =16,
+                            Question ="What is 12% of 1250",
+                            Options = new List<string>{"125","105","150","145.7"},
+                            CorrectAnswer ="150"
+                        },
+                        new Questionmodel
+                        {
+                            id =17,
+                            Question ="A shirt costs RS/-750. The shopkeeper offered them a discount of 15%. What is the cost of the shirt.",
+                            Options = new List<string>{"637.50","637","635","650"},
+                            CorrectAnswer ="637.50"
+                        },
+                        new Questionmodel
+                        {
+                            id =18,
+                            Question ="Find simple interest for ₹5000 at 5% for 2 years.",
+                            Options = new List<string>{"500","1000","750","380"},
+                            CorrectAnswer ="500"
+                        },
+                        new Questionmodel
+                        {
+                            id =19,
+                            Question ="If 12 men build a wall in 6 days, how many men needed for 3 days?",
+                            Options = new List<string>{"20","15","24","30"},
+                            CorrectAnswer ="24"
+                        },
+                        new Questionmodel
+                        {
+                            id =20,
+                            Question ="A train 120 m long crosses a pole in 12 seconds. Find speed (m/s).",
+                            Options = new List<string>{"12 m/s","10 m/s","8 m/s","15 m/s"},
+                            CorrectAnswer ="10 m/s"
+                        },
+
                     }
                 };
                 return View(Quiz);
-
             }
             return NotFound();
         }
 
         [HttpPost]
-        public IActionResult Mathematics_Easy(Quizmodel quiz)
+        public IActionResult Mathematics(Quizmodel quiz)
         {
             var user = Data.Users.FirstOrDefault(U => U.id == quiz.User_Id);
             if (user != null)
